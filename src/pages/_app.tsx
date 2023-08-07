@@ -22,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossOrigin="anonymous"
       referrerPolicy="no-referrer" />
+      <script src="https://cdn.tailwindcss.com"></script>
 
     </Head>
     <Component {...pageProps} />
