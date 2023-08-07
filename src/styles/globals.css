@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,200;1,400&family=Oswald&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
@@ -50,6 +50,48 @@ a {
   height: 100%;
 }
 
-
+/* Pantallas pequeñas */
+@media (max-width: 576px) {
   
+  .msize{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 
+  #subtitle{
+    font-size: 0.6rem;
+    line-height: 1rem;
+    
+  }
+}
+
+/* Pantallas medianas */
+@media (min-width: 576px) and (max-width: 768px) {
+  /* Aquí van las reglas CSS para pantallas medianas */
+}
+
+/* Pantallas grandes */
+@media (min-width: 768px) {
+  /* Aquí van las reglas CSS para pantallas grandes */
+}
+
+/* Pantallas extra grandes */
+@media (min-width: 1200px) {
+  /* Aquí van las reglas CSS para pantallas extra grandes */
+}
+  
+#mainText{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+}
+
+#subtitle{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 200;
+}
+
+
+
+#number{
+  font-family: 'Oswald', sans-serif;
+}
