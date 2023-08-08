@@ -52,6 +52,12 @@ a {
 
 /* Pantallas pequeñas */
 @media (max-width: 576px) {
+
+  #mainText{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    padding-left: 0.5rem;
+  }
   
   .msize{
     font-size: 0.75rem;
@@ -61,7 +67,24 @@ a {
   #subtitle{
     font-size: 0.6rem;
     line-height: 1rem;
+    padding-left: 0.5rem;
     
+  }
+
+  #smallCircle {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #hiddenText {
+    display: none;
+      
+  }
+
+  #lapNumber{
+    font-family: 'Oswald', sans-serif;
+    padding-left: 1rem;
+    margin-top: 0.25rem;
   }
 }
 
@@ -75,9 +98,20 @@ a {
   /* Aquí van las reglas CSS para pantallas grandes */
 }
 
+@media (min-width: 1024px) {
+  /* Aquí van las reglas CSS para pantallas grandes */
+  #circleDiv{
+    height: 50%;
+  }
+}
+
 /* Pantallas extra grandes */
 @media (min-width: 1200px) {
   /* Aquí van las reglas CSS para pantallas extra grandes */
+  #lapNumber{
+    
+    margin-top: 4rem;
+  }
 }
   
 #mainText{
