@@ -5,19 +5,19 @@ import { ChangeEvent, useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
 
-
-
 export default function Home() {
-
   const [state, setState] = useState([]);
 
-async function getCircuitName() {
+  async function getCircuitName() {
     try {
       const { data } = await axios.get(
-        process.env.NEXT_PUBLIC_API + "f1/2023/circuits.json"
+        process.env.NEXT_PUBLIC_API + "f1/2023.json"
       );
-      console.log("🚀 ~ file: index.tsx:53 ~ getProjects ~ data:", data.MRData.CircuitTable.Circuits);
-      setState(data.MRData.CircuitTable.Circuits);
+      console.log(
+        "🚀 ~ file: index.tsx:53 ~ getProjects ~ data:",
+        data.MRData.RaceTable.Races
+      );
+      setState(data.MRData.RaceTable.Races);
     } catch (error) {
       console.log(error);
     }
@@ -27,11 +27,13 @@ async function getCircuitName() {
     getCircuitName();
   }, []);
 
+  
+
   return (
     <>
       {state
         ? state.map((p: any) => (
-            <div key={p.circuitId} className="d-flex text-body-secondary pt-3">
+            <div key={p.round} className="d-flex text-body-secondary pt-3">
               <div className="rounded-sm border-2 border-black flex flex-row mt-12 mr-12 ml-12 bg-[#13242b] gradient-background">
                 <div className="w-1/3 flex-column">
                   <div className="font-medium h-1/3">
@@ -39,9 +41,9 @@ async function getCircuitName() {
                       id="mainText"
                       className="xl:text-4xl lg:text-2xl md:text-2xl sm:text-sm pl-4 pt-2 text-white msize"
                     >
-                          {p.Location.country}
-                        
+                      {p.raceName}
                     </p>
+                    
                   </div>
                   <div className="font-medium h-1/3">
                     <p
