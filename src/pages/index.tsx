@@ -21,6 +21,12 @@ export default function Home() {
         src: "/images/jeddah.png",
         alt: "barhain",
       },
+      3: {
+        id: "jeddah",
+        src: "/images/jeddah.png",
+        alt: "barhain",
+      }
+      
     },
   };
 
@@ -40,6 +46,7 @@ export default function Home() {
       console.log(error);
     }
   }
+  
 
   useEffect(() => {
     getCircuitName();
@@ -116,13 +123,13 @@ export default function Home() {
                       DRS Zone
                     </p>
                   </div>
+                  
                 </div>
 
                 <div className="font-medium ml-auto w-8/12 xl:p-4">
                   {state.map((circuit: any) => {
-                    const matchingImage = Object.keys(
-                      imageCollection.images
-                    ).find((key) => key === circuit.round);
+                    const matchingImage = Object.keys(imageCollection.images).find((key) => key === circuit.round);
+                    console.log(matchingImage)
 
                     if (matchingImage) {
                       const image = imageCollection.images[matchingImage];
@@ -142,6 +149,8 @@ export default function Home() {
             </div>
           ))
         : ""}
+        
+      
 
       <img src="/images/barhain.png" alt="" />
     </>
